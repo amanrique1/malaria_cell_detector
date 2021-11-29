@@ -1,1 +1,1 @@
-# malaria_cell_detector
+# Malaria cell detector
