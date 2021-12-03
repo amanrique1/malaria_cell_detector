@@ -1,6 +1,6 @@
 # Malaria cell detector
 
-## Descripción
+## Description
 
 
 ## Requirements 📋
