@@ -1,5 +1,5 @@
 matplotlib
-statsmodels
 numpy
 scikit-learn
 pandas
+cv2
