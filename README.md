@@ -1,4 +1,13 @@
 # Malaria cell detector
 
-prueba
+## Descripción
 
+
+## Requirements 📋
+```
+* Python
+* Install matplotlib
+* Install numpy
+* Install scikit-learn
+* Install cv2
+```
