@@ -208,6 +208,7 @@ if __name__ == '__main__':
         ax2.text(0.5, 0.5, str(predictions[0]), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
             'facecolor': 'green' if predictions[0] else "red", 'alpha': 0.5}, fontsize=18)
         ax2.axis("off")
+        input("Press enter to continue")
         plt.show()
         exit()
 
