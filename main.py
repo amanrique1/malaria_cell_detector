@@ -200,7 +200,7 @@ if __name__ == '__main__':
         print("Probability: ", np.max(pscore[0]))
         
         figs, axes  = plt.subplots(3,1)
-        axes[0].imshow(mpimg.imread(image))
+        axes[0].imshow(cv2.cvtColor(image, cv2.COLOR_LAB2RGB))
         axes[0].axis("off")
         axes[1].text(0.5, 0.5, str(label), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
         'facecolor': 'green' if label else "red", 'alpha': 0.5}, fontsize=18)
