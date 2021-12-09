@@ -199,7 +199,7 @@ if __name__ == '__main__':
         print("Prediction: ", predictions[0])
         print("Probability: ", np.max(pscore[0]))
         
-        axes, figs = plt.subplots(3,1)
+        figs, axes  = plt.subplots(3,1)
         axes[0].imshow(mpimg.imread(image))
         axes[0].axis("off")
         axes[1].text(0.5, 0.5, str(label), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
