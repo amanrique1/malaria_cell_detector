@@ -198,18 +198,19 @@ if __name__ == '__main__':
         print("Expected: " + str(label))
         print("Prediction: ", predictions[0])
         print("Probability: ", np.max(pscore[0]))
-        
-        figs, axes  = plt.subplots(3,1)
-        axes[0].imshow(mpimg.imread(image))
-        axes[0].axis("off")
-        axes[1].text(0.5, 0.5, str(label), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
-        'facecolor': 'green' if label else "red", 'alpha': 0.5}, fontsize=18)
-        axes[1].axis("off")
-        axes[2].text(0.5, 0.5, str(predictions[0]), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
-        'facecolor': 'green' if predictions[0] else "red", 'alpha': 0.5}, fontsize=18)
-        axes[2].axis("off")
+
+        figs, (ax0, ax1, ax2) = plt.subplots(1, 3)
+        ax0.imshow(mpimg.imread(imagePath))
+        ax0.axis("off")
+        ax1.text(0.5, 0.5, str(label), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
+            'facecolor': 'green' if label else "red", 'alpha': 0.5}, fontsize=18)
+        ax1.axis("off")
+        ax2.text(0.5, 0.5, str(predictions[0]), style='italic', horizontalalignment='center', verticalalignment='center', bbox={
+            'facecolor': 'green' if predictions[0] else "red", 'alpha': 0.5}, fontsize=18)
+        ax2.axis("off")
+        plt.show()
         exit()
-        
+
     testData = []
     if len(testHist) == 0 or len(testLabels) == 0:
         paraTestFolder = glob.glob(os.path.join(
